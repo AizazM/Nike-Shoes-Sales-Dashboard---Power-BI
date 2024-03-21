@@ -1,0 +1,32 @@
+NIKE DASHBOARD -----------------------------------------------
+
+Create Date Table :->
+
+---------------------------------------------------------------
+
+Step 1:  
+Calender = CALENDAR(
+    DATE(YEAR(MIN('Data Sales Nike'[Invoice Date])),1,1),
+    DATE(YEAR(MAX('Data Sales Nike'[Invoice Date])),12,31)
+)
+
+---------------------------------------------------------------
+
+Month , year , Day Column Measures
+
+---------------------------------------------------------------
+
+Step 3: 
+
+day = FORMAT(Calender[Date],"ddd")
+
+day_no = DAY(Calender[Date])
+
+month = FORMAT(Calender[Date],"mmm")
+
+month_no = MONTH(Calender[Date])
+
+year = YEAR(Calender[Date])
+
+
+----------------------------------------------------------------
